@@ -31,18 +31,6 @@ Paste a WhatsApp message, email, or job offer and get an explainable, evidence-b
 - [Why it exists](#-the-problem)
 - [Key Features](#-key-features)
 - [Screenshots](#-screenshots)
-  - [01 · Landing — Hero](#01--landing--hero)
-  - [02 · Landing — Features](#02--landing--features)
-  - [03 · Sign in](#03--sign-in)
-  - [04 · Create account](#04--create-account)
-  - [05 · Analyzer workspace](#05--analyzer-workspace)
-  - [06 · Analyzer — example loaded](#06--analyzer--example-loaded)
-  - [07 · Results — high risk](#07--results--high-risk)
-  - [08 · Results — low risk](#08--results--low-risk)
-  - [09 · Analysis history](#09--analysis-history)
-  - [10 · Scam Intelligence Center](#10--scam-intelligence-center)
-  - [11 · Profile](#11--profile)
-  - [12 · Dashboard — mobile](#12--dashboard--mobile)
 - [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
 - [Getting Started](#-getting-started)
@@ -112,58 +100,31 @@ This exact message is sent to thousands of students every day. Scammers exploit 
 
 The app is fully designed in a **frosted-glass, midnight "cathedral"** visual language. Here is the complete flow — from the landing page through signing in to the analytics dashboards.
 
-<details>
-<summary><b>Open the full gallery (12 screenshots)</b></summary>
+> Click any thumbnail to open the full-size screenshot.
 
-### 01 · Landing — Hero
+#### 01 · Landing — Hero & 02 · Landing — Features & 03 · Sign in
 
-<a href="docs/screenshots/01-landing-hero.png"><img src="docs/screenshots/01-landing-hero.png" alt="Landing hero" width="900"/></a>
+| | | |
+|---|---|---|
+| [![01 · Landing — Hero](docs/screenshots/01-landing-hero.png)](docs/screenshots/01-landing-hero.png) | [![02 · Landing — Features](docs/screenshots/02-landing-features.png)](docs/screenshots/02-landing-features.png) | [![03 · Sign in](docs/screenshots/03-login.png)](docs/screenshots/03-login.png) |
 
-### 02 · Landing — Features
+#### 04 · Create account & 05 · Analyzer workspace & 06 · Analyzer — example loaded
 
-<a href="docs/screenshots/02-landing-features.png"><img src="docs/screenshots/02-landing-features.png" alt="Landing features" width="900"/></a>
+| | | |
+|---|---|---|
+| [![04 · Create account](docs/screenshots/04-register.png)](docs/screenshots/04-register.png) | [![05 · Analyzer workspace](docs/screenshots/05-analyze-signed-in.png)](docs/screenshots/05-analyze-signed-in.png) | [![06 · Analyzer — example loaded](docs/screenshots/06-analyze-example.png)](docs/screenshots/06-analyze-example.png) |
 
-### 03 · Sign in
+#### 07 · Results — high risk & 08 · Results — low risk & 09 · Analysis history
 
-<a href="docs/screenshots/03-login.png"><img src="docs/screenshots/03-login.png" alt="Sign in" width="900"/></a>
+| | | |
+|---|---|---|
+| [![07 · Results — high risk](docs/screenshots/07-results-high-risk.png)](docs/screenshots/07-results-high-risk.png) | [![08 · Results — low risk](docs/screenshots/08-results-low-risk.png)](docs/screenshots/08-results-low-risk.png) | [![09 · Analysis history](docs/screenshots/09-history.png)](docs/screenshots/09-history.png) |
 
-### 04 · Create account
+#### 10 · Scam Intelligence Center & 11 · Profile & 12 · Dashboard — mobile
 
-<a href="docs/screenshots/04-register.png"><img src="docs/screenshots/04-register.png" alt="Create account" width="900"/></a>
-
-### 05 · Analyzer workspace
-
-<a href="docs/screenshots/05-analyze-signed-in.png"><img src="docs/screenshots/05-analyze-signed-in.png" alt="Analyzer workspace" width="900"/></a>
-
-### 06 · Analyzer — example loaded
-
-<a href="docs/screenshots/06-analyze-example.png"><img src="docs/screenshots/06-analyze-example.png" alt="Analyzer with example" width="900"/></a>
-
-### 07 · Results — high risk
-
-<a href="docs/screenshots/07-results-high-risk.png"><img src="docs/screenshots/07-results-high-risk.png" alt="High risk results" width="900"/></a>
-
-### 08 · Results — low risk
-
-<a href="docs/screenshots/08-results-low-risk.png"><img src="docs/screenshots/08-results-low-risk.png" alt="Low risk results" width="900"/></a>
-
-### 09 · Analysis history
-
-<a href="docs/screenshots/09-history.png"><img src="docs/screenshots/09-history.png" alt="Analysis history" width="900"/></a>
-
-### 10 · Scam Intelligence Center
-
-<a href="docs/screenshots/10-intelligence.png"><img src="docs/screenshots/10-intelligence.png" alt="Scam Intelligence Center" width="900"/></a>
-
-### 11 · Profile
-
-<a href="docs/screenshots/11-profile.png"><img src="docs/screenshots/11-profile.png" alt="Profile" width="900"/></a>
-
-### 12 · Dashboard — mobile
-
-<a href="docs/screenshots/12-dashboard-mobile.png"><img src="docs/screenshots/12-dashboard-mobile.png" alt="Dashboard on mobile" width="400"/></a>
-
-</details>
+| | | |
+|---|---|---|
+| [![10 · Scam Intelligence Center](docs/screenshots/10-intelligence.png)](docs/screenshots/10-intelligence.png) | [![11 · Profile](docs/screenshots/11-profile.png)](docs/screenshots/11-profile.png) | [![12 · Dashboard — mobile](docs/screenshots/12-dashboard-mobile.png)](docs/screenshots/12-dashboard-mobile.png) |
 
 ---
 
