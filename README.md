@@ -21,6 +21,16 @@ Paste a WhatsApp message, email, or job offer and get an explainable, evidence-b
 ![MySQL](https://img.shields.io/badge/MySQL_8-4479a1?style=for-the-badge&logo=mysql&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS_3-38bdf8?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
+<br/>
+
+<p align="center">
+  <a href="docs/screenshots/07-results-high-risk.png">
+    <img src="docs/screenshots/07-results-high-risk.png" alt="One paste becomes an explainable CRITICAL risk verdict" width="840"/>
+  </a>
+  <br/>
+  <sub><b>Paste any offer → get an explainable risk verdict in seconds</b> — payment demands, urgency traps, phony deadlines and personal-email red flags, all surfaced instantly.</sub>
+</p>
+
 </div>
 
 ---
@@ -381,16 +391,25 @@ TraceOrigin/
 ## 📦 Releases & Packages
 
 - **GitHub Releases** — see [`RELEASE.md`](RELEASE.md) for the release checklist and how versions are cut.
-- **Automated packaging** — the [`release.yml`](.github/workflows/release.yml) workflow builds the frontend and attaches:
-  - 📦 the production build as `traceorigin-frontend.tar.gz`
-  - 📦 the npm tarball via `npm pack`
+- **GitHub Packages** — every tag published to `npm` ships the frontend as a public npm package on the GitHub Packages registry:
+  `@sabynextdoor/scamcheck-frontend` — see the repo's **Packages** tab.
+- **Automated packaging** — the [`release.yml`](.github/workflows/release.yml) workflow, on every `v*` tag:
+  - 📦 publishes `@sabynextdoor/scamcheck-frontend` to **GitHub Packages** (`npm publish`)
+  - 📦 attaches the production build as `traceorigin-frontend.tar.gz`
+  - 📦 attaches the npm tarball via `npm pack`
 - **Source archives** — every release automatically includes GitHub's generated `.zip` / `.tar.gz`.
 - Versioning follows **SemVer** (`v1.0.0`, `v1.1.0`, …).
 
+**Install the published frontend package** (from any project):
+
 ```bash
-# Manual release (if you prefer not to use the workflow):
-gh release create v1.1.0 --title "v1.1.0" --generate-notes
+npm config set @sabynextdoor:registry https://npm.pkg.github.com
+npm install @sabynextdoor/scamcheck-frontend
 ```
+
+*(Access requires auth for GitHub Packages when not using a GitHub Actions token — see [GitHub docs](https://docs.github.com/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).)*
+
+**Manual release** (if you prefer not to use the workflow):
 
 ---
 

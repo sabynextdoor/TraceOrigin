@@ -1,8 +1,16 @@
 {
-  "name": "scamcheck-frontend",
+  "name": "@sabynextdoor/scamcheck-frontend",
   "version": "1.0.0",
   "description": "TraceOrigin — the phishing-aware student opportunity verification platform (frontend). Crafted by Saby N. (sabynextdoor).",
   "author": "Saby N. <sabynextdoor@gmail.com> (https://github.com/sabynextdoor)",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",

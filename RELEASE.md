@@ -27,10 +27,14 @@ TraceOrigin follows **SemVer** (`MAJOR.MINOR.PATCH`).
    git push origin v1.1.0
    ```
 
-5. The `Release` workflow builds the frontend (`npm ci && npm run build`) and attaches to the GitHub Release:
-   - `scamcheck-frontend-<version>.tgz` — npm tarball of the frontend package
-   - `traceorigin-frontend.tar.gz` — the deployable production build (`frontend/dist`)
-   - auto-generated GitHub source archives (`.zip` + `.tar.gz`) and release notes
+5. The `Release` workflow builds the frontend (`npm ci && npm run build`) and:
+   - 📦 publishes `@sabynextdoor/scamcheck-frontend` to **GitHub Packages** (the npm registry at `npm.pkg.github.com`) using the workflow's `GITHUB_TOKEN`
+   - 📦 attaches to the GitHub Release:
+     - `sabynextdoor-scamcheck-frontend-<version>.tgz` — npm tarball of the frontend package
+     - `traceorigin-frontend.tar.gz` — the deployable production build (`frontend/dist`)
+     - auto-generated GitHub source archives (`.zip` + `.tar.gz`) and release notes
+
+> The published package is a **build artifact**, not a distributable library: it contains the compiled `frontend/dist` bundle built on CI. The GitHub Packages version is set by the tag — keep `frontend/package.json` `version` in sync with the tag.
 
 ## Cutting a release (manual path)
 
@@ -46,11 +50,14 @@ gh release create v1.1.0 \
   dist/*.tgz dist/*.tar.gz
 ```
 
+> Manual local `npm publish` to GitHub Packages requires a token with **write:packages** scope plus `@sabynextdoor:registry=npm.pkg.github.com` in `.npmrc`. Prefer letting the workflow publish.
+
 ## Release checklist
 
 Before tagging, verify:
 
 - [ ] `npm run build` succeeds with no warnings
+- [ ] `frontend/package.json` `version` matches the tag you're about to push
 - [ ] backend boots: `uvicorn app.main:app --port 8001` and `/api/health` is healthy
 - [ ] README screenshots match the current design
 - [ ] `.env.example` reflects any new configuration keys
@@ -59,4 +66,5 @@ Before tagging, verify:
 ## Known limitations
 
 - GitHub Actions **source archives** are free on public repos. The workflow additionally packages the frontend build and npm tarball as release assets.
-- `npm publish` to GitHub Packages is intentionally **not** used — this repository's token scope is limited to releases, so packages ship as release attachments instead.
+- The published GitHub Packages npm package is scoped (`@sabynextdoor/…`) and built by CI only — it will never appear on the public npmjs.com registry.
+- A version can be published to GitHub Packages **only once** per repo/tag; to republish after a fix, bump the version or delete the package first.
