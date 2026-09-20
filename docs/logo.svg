@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="TraceOrigin logo">
+  <defs>
+    <linearGradient id="tog-core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9d7bff"/>
+      <stop offset="55%" stop-color="#663af3"/>
+      <stop offset="100%" stop-color="#4c21c9"/>
+    </linearGradient>
+    <linearGradient id="tog-orbit" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d8ecf8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#d8ecf8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#d8ecf8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="tog-glass" cx="0.38" cy="0.22" r="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tog-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Glass tile -->
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="#0b1020"/>
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="url(#tog-glass)"/>
+  <rect x="27" y="27" width="458" height="458" rx="113" fill="none" stroke="rgba(186,215,247,0.18)" stroke-width="2"/>
+
+  <!-- Orbit -->
+  <ellipse cx="256" cy="256" rx="164" ry="82" fill="none" stroke="url(#tog-orbit)" stroke-width="3.5" transform="rotate(-24 256 256)"/>
+  <circle cx="404" cy="200" r="13" fill="#d8ecf8"/>
+  <circle cx="404" cy="200" r="26" fill="none" stroke="rgba(216,236,248,0.25)" stroke-width="2"/>
+
+  <!-- Shield -->
+  <g filter="url(#tog-glow)">
+    <path d="M256 118 L362 165 V256 C362 332 318 385 256 402 C194 385 150 332 150 256 V165 Z" fill="url(#tog-core)"/>
+  </g>
+  <path d="M256 118 L362 165 V256 C362 332 318 385 256 402 C194 385 150 332 150 256 V165 Z" fill="none" stroke="rgba(216,236,248,0.4)" stroke-width="2"/>
+
+  <!-- Check -->
+  <path d="M219 265 L248 294 L300 228" fill="none" stroke="#d8ecf8" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

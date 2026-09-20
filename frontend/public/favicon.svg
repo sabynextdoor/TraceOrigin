@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Gradient adjusted to match the vivid blue-purple-pink flow -->
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e65ff" />
+      <stop offset="50%" stop-color="#924cee" />
+      <stop offset="100%" stop-color="#ec398a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Smooth squirclish background icon frame -->
+  <rect width="100" height="100" rx="30" fill="url(#grad)" />
+
+  <!-- Clean, hollow white shield outline matching the image -->
+  <path 
+    d="M50 24 L28 35 V52 C28 68 50 78 50 78 C50 78 72 68 72 52 V35 Z" 
+    stroke="#ffffff" 
+    stroke-width="5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none" 
+  />
+</svg>

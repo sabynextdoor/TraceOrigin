@@ -1,0 +1,153 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        /* ── AuthKit · Midnight Canvas system ───────────────────── */
+        'midnight-canvas': '#05060f',
+        'steel-plate': '#2f343e',
+        'fog-veil': '#9da7ba',
+        'moon-mist': '#c7d3ea',
+        'frost-glow': '#d1e4fa',
+        'ice-highlight': '#d8ecf8',
+        'void-violet': '#663af3',
+        'blueprint-blue': '#b6d9fc',
+        'ember-glow': '#e46d4c',
+        'signal-blue': '#027dea',
+        'deep-teal': '#269684',
+        'gridline-blue': '#3f4959',
+        'glass-edge': '#bad7f71f',
+        'luminous-fill': '#c7d3ea1f',
+
+        /* Working aliases used by components */
+        canvas: '#05060f',
+        canvas2: '#0a0d18',
+        surface: 'rgba(186,214,247,0.03)',
+        surface2: 'rgba(186,214,247,0.06)',
+        surface3: 'rgba(186,214,247,0.12)',
+        hairline: 'rgba(186,215,247,0.12)',
+        hairline2: 'rgba(216,236,248,0.2)',
+        ice: '#d8ecf8',
+        frost: '#d1e4fa',
+        mist: '#c7d3ea',
+        fog: '#9da7ba',
+        accent: '#663af3',
+        'accent-soft': 'rgba(102,58,243,0.14)',
+        'accent-glow': 'rgba(102,58,243,0.35)',
+
+        /* Semantic status colors (risk language, not decorative) */
+        danger: '#ff6b6b',
+        'danger-soft': 'rgba(255,107,107,0.12)',
+        warn: '#f5b84c',
+        'warn-soft': 'rgba(245,184,76,0.12)',
+        ok: '#46c98f',
+        'ok-soft': 'rgba(70,201,143,0.12)',
+        info: '#027dea',
+        'info-soft': 'rgba(2,125,234,0.14)',
+
+        /* Cool blue-ramp fallback for legacy references */
+        dark: {
+          50: '#eef2f8',
+          100: '#dce3ee',
+          200: '#b9c4d6',
+          300: '#93a2ba',
+          400: '#6d7c94',
+          500: '#4c5a70',
+          600: '#333f52',
+          700: '#232d3d',
+          800: '#161d2a',
+          900: '#0b0f1a',
+          950: '#05060f',
+        },
+        scam: {
+          critical: '#ff6b6b',
+          high: '#f5b84c',
+          medium: '#f0a64b',
+          low: '#46c98f',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
+      },
+      fontSize: {
+        caption: ['12px', { lineHeight: '1.33' }],
+        'body-sm': ['14px', { lineHeight: '1.43' }],
+        body: ['16px', { lineHeight: '1.5', letterSpacing: '-0.16px' }],
+        subheading: ['18px', { lineHeight: '1.33' }],
+        'heading-sm': ['24px', { lineHeight: '1.17', letterSpacing: '-0.24px' }],
+        heading: ['28px', { lineHeight: '1.14' }],
+        'heading-lg': ['44px', { lineHeight: '1.16' }],
+        display: ['48px', { lineHeight: '1.17' }],
+      },
+      borderRadius: {
+        cards: '16px',
+        badges: '6px',
+        inputs: '6px',
+        buttons: '999px',
+        modals: '16px',
+        icons: '9999px',
+        pill: '999px',
+      },
+      boxShadow: {
+        'glass': 'inset 0 1px 1px rgba(216,236,248,0.2), inset 0 24px 48px rgba(168,216,245,0.06), 0 16px 32px rgba(0,0,0,0.3)',
+        'glass-deep': 'inset 0 1px 1px rgba(199,211,234,0.12), inset 0 24px 48px rgba(199,211,234,0.05), 0 24px 32px rgba(6,6,14,0.7)',
+        'glass-eye': 'inset 0 0 0 1px rgba(186,215,247,0.12)',
+        'glow': '0 0 6px rgba(186,207,247,0.32), 0 0 12px rgba(238,186,247,0.24)',
+        'accent': '0 0 0 1px rgba(102,58,243,0.4), 0 0 16px rgba(102,58,243,0.35)',
+        'sm': 'rgba(186,207,247,0.32) 0px 0px 6px 0px',
+        'md': 'rgba(238,186,247,0.24) 0px 0px 12px 0px',
+        'subtle': 'inset 0 0 0 1px rgba(186,215,247,0.12)',
+        'subtle-strong': 'inset 0 0 0 1px rgba(186,214,247,0.24)',
+      },
+      spacing: {
+        36: '36px',
+        56: '56px',
+        100: '100px',
+        120: '120px',
+        132: '32rem',
+        150: '37.5rem',
+        200: '200px',
+      },
+      maxWidth: {
+        authkit: '1200px',
+        cathedral: '64rem',
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'pulse-dot': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.35' },
+        },
+        'rise': {
+          '0%': { transform: 'translateY(6px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'float-slow': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.55s cubic-bezier(0.22,1,0.36,1) both',
+        'fade-in': 'fade-in 0.4s ease both',
+        'pulse-dot': 'pulse-dot 1.6s ease-in-out infinite',
+        'rise': 'rise 0.35s cubic-bezier(0.22,1,0.36,1) both',
+        'float-slow': 'float-slow 6s ease-in-out infinite',
+      },
+    },
+  },
+  plugins: [],
+}
