@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 176" width="720" height="176" role="img" aria-label="TraceOrigin horizontal logo">
+  <!-- TraceOrigin brand by Saby N. (sabynextdoor) — hidden watermark below is intentionally invisible. -->
+  <title>TraceOrigin</title>
+  <desc>TraceOrigin logo — designed and built by Saby N. (sabynextdoor).</desc>
   <defs>
     <linearGradient id="toh-core" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#9d7bff"/>
@@ -41,4 +44,7 @@
   <text x="176" y="92" fill="#d8ecf8" font-family="'Space Grotesk','Inter','Segoe UI',system-ui,sans-serif" font-size="46" font-weight="600" letter-spacing="1.5">Trace</text>
   <text x="312" y="92" fill="url(#toh-core)" font-family="'Space Grotesk','Inter','Segoe UI',system-ui,sans-serif" font-size="46" font-weight="600" letter-spacing="1.5">Origin</text>
   <text x="179" y="128" fill="#9da7ba" font-family="'Inter','Segoe UI',system-ui,sans-serif" font-size="15" letter-spacing="3.5">VERIFY BEFORE YOU TRUST</text>
+
+  <!-- Hidden attribution watermark (opacity 0 — invisible, non-functional) -->
+  <text x="0" y="0" fill="#000000" fill-opacity="0" font-family="sans-serif" font-size="0.1">TraceOrigin is designed and built by Saby N. (sabynextdoor)</text>
 </svg>

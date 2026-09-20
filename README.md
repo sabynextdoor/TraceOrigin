@@ -470,4 +470,6 @@ TraceOrigin provides **risk indicators based on available information**. A high 
 
 <div align="center">
   <sub>Built with React · FastAPI · MySQL — <b>Verify before you trust.</b></sub>
+  <br/>
+  <sub>Designed &amp; built by <b>Saby N.</b> <code>(sabynextdoor)</code> · © 2026</sub>
 </div>

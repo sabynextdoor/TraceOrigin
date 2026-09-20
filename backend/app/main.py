@@ -16,6 +16,16 @@ app = FastAPI(
 )
 
 
+# TraceOrigin attribution watermark — sent on every response as a header.
+# Harmless, non-breaking, and easy to spot with curl -i.
+@app.middleware("http")
+async def trace_origin_watermark(request, call_next):
+    response = await call_next(request)
+    response.headers["X-TraceOrigin"] = "crafted-by-sabynextdoor"
+    response.headers["X-TraceOrigin-Version"] = "1.0.0"
+    return response
+
+
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
