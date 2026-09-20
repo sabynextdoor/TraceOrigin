@@ -28,9 +28,9 @@ TraceOrigin follows **SemVer** (`MAJOR.MINOR.PATCH`).
    ```
 
 5. The `Release` workflow builds the frontend (`npm ci && npm run build`) and:
-   - 📦 publishes `@sabynextdoor/scamcheck-frontend` to **GitHub Packages** (the npm registry at `npm.pkg.github.com`) using the workflow's `GITHUB_TOKEN`
+   - 📦 publishes `@sabynextdoor/traceorigin-frontend` to **GitHub Packages** (the npm registry at `npm.pkg.github.com`) using the workflow's `GITHUB_TOKEN`
    - 📦 attaches to the GitHub Release:
-     - `sabynextdoor-scamcheck-frontend-<version>.tgz` — npm tarball of the frontend package
+     - `sabynextdoor-traceorigin-frontend-<version>.tgz` — npm tarball of the frontend package
      - `traceorigin-frontend.tar.gz` — the deployable production build (`frontend/dist`)
      - auto-generated GitHub source archives (`.zip` + `.tar.gz`) and release notes
 

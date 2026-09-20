@@ -185,13 +185,13 @@ The app is fully designed in a **frosted-glass, midnight "cathedral"** visual la
 |---------|---------|-------|
 | Python  | 3.10+   | 3.12 recommended (pinned deps wheel-tested) |
 | Node.js | 18+     | 20/22 LTS recommended |
-| MySQL   | 8.x     | Create the `scamcheck` database yourself |
+| MySQL   | 8.x     | Create the `traceorigin` database yourself |
 | Git     | —       | For cloning |
 
 ### 1 · Database
 
 ```sql
-CREATE DATABASE IF NOT EXISTS scamcheck CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS traceorigin CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
 Tables are **auto-created on first boot** by `Base.metadata.create_all` — no migrations to run.
@@ -218,7 +218,7 @@ cp .env.example .env
 
 ```dotenv
 ENV=development
-DATABASE_URL=mysql+pymysql://root:yourpassword@localhost:3306/scamcheck
+DATABASE_URL=mysql+pymysql://root:yourpassword@localhost:3306/traceorigin
 SECRET_KEY=replace-with-a-long-random-secret
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
@@ -230,7 +230,7 @@ Run the API:
 uvicorn app.main:app --reload --port 8001
 ```
 
-Health check → `http://localhost:8001/api/health` → `{"status":"healthy","service":"ScamCheck API"}`
+Health check → `http://localhost:8001/api/health` → `{"status":"healthy","service":"TraceOrigin API"}`
 
 ### 3 · Frontend
 
@@ -392,9 +392,9 @@ TraceOrigin/
 
 - **GitHub Releases** — see [`RELEASE.md`](RELEASE.md) for the release checklist and how versions are cut.
 - **GitHub Packages** — every tag published to `npm` ships the frontend as a public npm package on the GitHub Packages registry:
-  `@sabynextdoor/scamcheck-frontend` — see the repo's **Packages** tab.
+  `@sabynextdoor/traceorigin-frontend` — see the repo's **Packages** tab.
 - **Automated packaging** — the [`release.yml`](.github/workflows/release.yml) workflow, on every `v*` tag:
-  - 📦 publishes `@sabynextdoor/scamcheck-frontend` to **GitHub Packages** (`npm publish`)
+  - 📦 publishes `@sabynextdoor/traceorigin-frontend` to **GitHub Packages** (`npm publish`)
   - 📦 attaches the production build as `traceorigin-frontend.tar.gz`
   - 📦 attaches the npm tarball via `npm pack`
 - **Source archives** — every release automatically includes GitHub's generated `.zip` / `.tar.gz`.
@@ -404,7 +404,7 @@ TraceOrigin/
 
 ```bash
 npm config set @sabynextdoor:registry https://npm.pkg.github.com
-npm install @sabynextdoor/scamcheck-frontend
+npm install @sabynextdoor/traceorigin-frontend
 ```
 
 *(Access requires auth for GitHub Packages when not using a GitHub Actions token — see [GitHub docs](https://docs.github.com/packages/working-with-a-github-packages-registry/working-with-the-npm-registry).)*

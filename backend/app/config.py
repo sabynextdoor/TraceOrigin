@@ -6,7 +6,7 @@ load_dotenv()
 _IS_LOCAL = os.getenv("FLASK_ENV", "development") == "development" or os.getenv("ENV", "development") == "development" or "localhost" in os.getenv("DATABASE_URL", "")
 
 class Config:
-    DATABASE_URL = os.getenv("DATABASE_URL", "mysql+pymysql://root:password@localhost:3306/scamcheck")
+    DATABASE_URL = os.getenv("DATABASE_URL", "mysql+pymysql://root:password@localhost:3306/traceorigin")
     
     # Auth
     SECRET_KEY = os.getenv("SECRET_KEY")

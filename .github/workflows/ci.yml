@@ -37,7 +37,7 @@ jobs:
         image: mysql:8
         env:
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: scamcheck
+          MYSQL_DATABASE: traceorigin
         ports:
           - 3306:3306
         options: >-
@@ -67,7 +67,7 @@ jobs:
       - name: Import FastAPI app (with MySQL)
         env:
           ENV: development
-          DATABASE_URL: mysql+pymysql://root:root@localhost:3306/scamcheck
+          DATABASE_URL: mysql+pymysql://root:root@localhost:3306/traceorigin
           SECRET_KEY: ci-only-secret-not-for-production
         run: |
           python -c "from app.main import app; print('import ok — routes:', len(app.routes))"

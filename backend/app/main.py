@@ -11,7 +11,7 @@ Base.metadata.create_all(bind=engine)
 
 # Create FastAPI app
 app = FastAPI(
-    title="ScamCheck API",
+    title="TraceOrigin API",
     description="Student opportunity verification platform"
 )
 
@@ -32,8 +32,6 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://scam-check-alpha.vercel.app",
-        "https://scamcheck-2-xqh3.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -54,6 +52,6 @@ app.include_router(alerts.router, prefix="/api")
 @app.get("/")
 async def root():
     return {
-        "message": "ScamCheck API",
+        "message": "TraceOrigin API",
         "version": "1.0.0"
     }
