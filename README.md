@@ -421,7 +421,7 @@ TraceOrigin/
 
 - **GitHub Releases** — see [`RELEASE.md`](RELEASE.md) for the release checklist and how versions are cut.
 - **Automated packaging** — the [`release.yml`](.github/workflows/release.yml) workflow builds the frontend and attaches:
-  - 📦 the production build as `traceorigin-frontend.zip`
+  - 📦 the production build as `traceorigin-frontend.tar.gz`
   - 📦 the npm tarball via `npm pack`
 - **Source archives** — every release automatically includes GitHub's generated `.zip` / `.tar.gz`.
 - Versioning follows **SemVer** (`v1.0.0`, `v1.1.0`, …).
